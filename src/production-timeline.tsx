@@ -48,7 +48,7 @@ export function ProductionTimeline() {
   }, [])
 
   return (
-    <div className="space-y-px">
+    <div className="space-y-px pt-10">
       {timeSlots.map((slot) => (
         <div key={slot.hour} className="flex items-stretch h-8">
           <div className="w-8 flex items-center justify-end pr-2 text-sm tabular-nums">
