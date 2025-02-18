@@ -28,7 +28,9 @@ export function BatchInfo() {
       
 
       <div className="grid grid-flow-row space-y-2">
-        <div className="text-sm text-left">Previous</div>
+        <div className="text-sm text-left">Previous
+          <hr style={{width:'55px'}}></hr>
+        </div>
         <div className="text-sm bg-orange-600 text-left" style={{height: "12px;"}}></div>
         <div className="flex justify-between text-sm">
           <div>HVY87AA</div>
