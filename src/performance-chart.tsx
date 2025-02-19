@@ -65,8 +65,11 @@ export function PerformanceChart() {
           <span className="text-gray-400">OEE (60%)</span>
         </div> */}
         <div className="flex items-left gap-8 text-sm">
-          <span>pcs/h</span>
-          <span className="text-gray-400">OEE</span>
+          <span className="text-gray-400 text-base ">
+            pcs/h
+            <hr></hr>
+          </span>
+          <span className="text-gray-400 ">OEE</span>
         </div>
       </div>
       <div className="h-[180px] -ml-4">

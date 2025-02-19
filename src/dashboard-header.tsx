@@ -1,22 +1,29 @@
-"use client"
+"use client";
 
-import { ChevronLeft, ChevronRight, Settings, SkipForward } from "lucide-react"
-import { useEffect, useState } from "react"
+import {
+  AlignJustify,
+  ChevronLeft,
+  ChevronRight,
+  Settings,
+  SkipForward,
+} from "lucide-react";
+import { useEffect, useState } from "react";
 
 export function DashboardHeader() {
-  const [currentTime, setCurrentTime] = useState(new Date())
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [])
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="h-16 border-b border-gray-800 px-4 flex items-center justify-between">
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-1">
+          <AlignJustify />
           <button className="p-1 hover:bg-gray-800 rounded">
             <ChevronLeft className="w-5 h-5" />
           </button>
@@ -25,14 +32,19 @@ export function DashboardHeader() {
           </button>
         </div>
         <div>
-          <div className="text-[10px] uppercase text-gray-400 leading-tight">STATION</div>
+          <div className="text-[10px] uppercase text-gray-400 leading-tight">
+            STATION
+          </div>
           <div className="text-lg font-semibold leading-tight">Valve Plate</div>
         </div>
       </div>
+
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2">
           <div className="flex flex-col items-end">
-            <div className="text-[10px] uppercase text-gray-400 leading-tight">SHIFT</div>
+            <div className="text-[10px] uppercase text-gray-400 leading-tight">
+              SHIFT
+            </div>
             <div className="leading-tight">Monday 03.02 - Morning</div>
           </div>
           <div className="flex gap-1">
@@ -57,11 +69,18 @@ export function DashboardHeader() {
           </span>
           <span className="text-xl text-gray-500">17</span>
         </div>
+        <div className="flex items-center space-x-2">
+          <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+
+          <span className="px-4 py-1.5 text-sm font-bold text-white bg-green-600 rounded shadow-md tracking-wide">
+            LIVE
+          </span>
+        </div>
+
         <button className="p-1 hover:bg-gray-800 rounded">
           <Settings className="w-5 h-5" />
         </button>
       </div>
     </div>
-  )
+  );
 }
-
